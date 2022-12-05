@@ -65,18 +65,18 @@ export default function Card(props) {
     return (
 
         <CardCss cor={color} text={textCard.includes(numberQuestion)} cardSecond={textCard.includes(question)}>
-            <span >{textCard}</span>
+            <span data-test="flashcard-text">{textCard}</span>
 
             {textCard !== answer
                 ? (<button disabled={buttonDisabled}
                     onClick={start}
                 >
-                    <img src={image} alt="seta virar" />
+                    <img data-test="play-btn" src={image} alt={image} />
                 </button>)
                 : (<div>
-                    <button onClick={notRemember}  >Não lembrei</button>
-                    <button onClick={almostRemember} >Quase não lembrei</button>
-                    <button onClick={sure}>Zap!</button>
+                    <button data-test="no-btn" onClick={notRemember}  >Não lembrei</button>
+                    <button data-test="partial-btn" onClick={almostRemember} >Quase não lembrei</button>
+                    <button data-test="zap-btn" onClick={sure}>Zap!</button>
                 </div>)
 
             }

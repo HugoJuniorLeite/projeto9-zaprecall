@@ -18,7 +18,7 @@ export default function Body() {
 
 const Container = styled.main`
     width:100vw;
-    min-heigth:100hw;
+    min-height:100vh;
     background-color: #FB6B6B;
     display: flex;
     flex-direction:column;
