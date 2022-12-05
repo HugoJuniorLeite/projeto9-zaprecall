@@ -5,7 +5,7 @@ export default function Footer(props) {
 
 
     return (
-        <FooterCss>
+        <FooterCss data-test="footer">
             {plays}/{length} CONCLUÍDOS
         </FooterCss>
     )

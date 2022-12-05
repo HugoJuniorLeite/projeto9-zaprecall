@@ -15,7 +15,7 @@ export default function Cards() {
 
 
 		<>       <ContainerCards>
-			{question.map((e => <Card
+			{question.map((e => <Card data-test="flashcard"
 				key={e.id} numberQuestion={e.numberQuestion}
 				question={e.question} answer={e.answer}
 				plays={plays} setPlays={setPlays} />
