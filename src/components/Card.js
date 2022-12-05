@@ -64,7 +64,7 @@ export default function Card(props) {
 
     return (
 
-        <CardCss cor={color} text={textCard.includes(numberQuestion)}>
+        <CardCss cor={color} text={textCard.includes(numberQuestion)} cardSecond={textCard.includes(question)}>
             <span >{textCard}</span>
 
             {textCard !== answer
@@ -87,6 +87,7 @@ export default function Card(props) {
 
 
 const CardCss = styled.li`
+    position:relative;
     font-family: 'Recursive';
     font-style: normal;
     font-weight: ${props => props.text === true ? "700" : "400"};
@@ -106,6 +107,9 @@ const CardCss = styled.li`
     border-radius:5px;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
 button{
+    position:${props => props.cardSecond === true ? "absolute" : "static"};   
+    right: 15px;
+    bottom:6px;
     border:none;
     background-color:transparent;
     font-family: 'Recursive';
@@ -136,7 +140,7 @@ div button:nth-child(3){
     background-color:#2FBE34;
 }
 img{
-    padding-top: ${props => props.text === true ? "0" : "100px"};
+
     width: 23px;
     height: 23px;
 }
