@@ -1,9 +1,11 @@
 import Body from "./components/Body";
-
+import GlobalStyle from '../src/assets/styles/GlobalStyle';
 function App() {
   return (
-    
-    <Body/>
+    <>
+      <GlobalStyle />
+      <Body />
+    </>
   );
 }
 

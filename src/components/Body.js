@@ -1,18 +1,27 @@
+import styled from "styled-components"
 import Cards from "./Cards"
-import Footer from "./Footer"
 import Header from "./Header"
- 
-export default function Body(){
 
-    return(
-<>
+export default function Body() {
 
-<Header/>
-<Cards/>
+    return (
+        <Container>
 
+            <Header />
+            <Cards />
 
-
-</>
+        </Container>
 
     )
 }
+
+
+const Container = styled.main`
+    width:100vw;
+    min-heigth:100hw;
+    background-color: #FB6B6B;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+`
